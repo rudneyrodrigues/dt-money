@@ -5,9 +5,10 @@ import type { AppProps } from 'next/app'
 import { makeServer } from '@/services/mirage'
 import { Toaster } from '@/components/ui/Toast/Toaster'
 
-if (process.env.VERCEL_ENV === 'development') {
-  makeServer()
-}
+// if (process.env.VERCEL_ENV === 'development') {
+//   makeServer()
+// }
+makeServer()
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
