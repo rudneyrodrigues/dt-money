@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 
 import type { AppProps } from 'next/app'
+import { Analytics } from '@vercel/analytics/react'
 
 import { makeServer } from '@/services/mirage'
 import { Toaster } from '@/components/ui/Toast/Toaster'
@@ -16,6 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Toaster />
 
       <Component {...pageProps} />
+
+      <Analytics />
     </div>
   )
 }
